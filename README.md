@@ -2,14 +2,35 @@
 
 A strapi application with example of article with category and ratings feature
 
-# Strapi features which are implemented
-- aws s3 upload
-- google auth
-- API documentation
+### 🖐 Requirements
 
-# setup server
+**Supported operating systems**:
+- Ubuntu 18.04/Debian 9.x
+- CentOS/RHEL 8
+- macOS Mojave
+- Windows 10
+
+**Node:**
+- NodeJS >= 10.x
+- NPM >= 6.x
+
+**Database:**
+- PostgreSQL >= 10
+
+## Strapi features which are implemented:
+- **Modern Admin Panel:** Elegant, entirely customizable and a fully extensible admin panel.
+- **Plugins:**
+  - *Content-Type Builder:* Using this plugin you can create collection types, single type and components.
+  - *Roles & Permissions:* This plugin provides a way to protect your API with a full authentication process based on JWT. This plugin comes also with an ACL strategy that allows you to manage the permissions between the groups of users.
+    - *Providers:* 
+      - Google
+  - *Upload:* You can upload any kind of file on external providers **AWS S3**
+  - *GraphQL:* With the GraphQL plugin, you will be able to fetch and mutate your content.
+  - *API Documentation:* This plugin uses SWAGGER UI to visualize your API's documentation.
+
+## How to Setup Server:
 - go to `docs` directory
-- run command `docker-compose up -d`
+- run command `docker-compose up -d` using this command you can install postgresql image on docker
 - go back to main directory
 - run `npm i` to install dependencies
 - run `npm run develop` to start development server
