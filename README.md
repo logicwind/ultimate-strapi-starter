@@ -37,6 +37,8 @@ plan to launch v1 in mid JUNE
 
 ### How to Setup Server:
 - run `npm i` to install dependencies
+- create `.env` to set env variables
+- copy all variables from .env.development and set the value
 - run `npm run develop` to start development server
 - run `npm run build` to build strapi app
 - run `npm run start` to start server

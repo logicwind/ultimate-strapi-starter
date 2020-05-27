@@ -1,0 +1,12 @@
+{
+  "provider": "aws-s3",
+  "providerOptions": {
+    "accessKeyId": "${process.env.DO_ACCESS_ID}",
+    "secretAccessKey": "${process.env.DO_ACCESS_SECRET_KEY}",
+    "region": "${process.env.DO_REGION}",
+    "endpoint": "${process.env.DO_ENDPOINT}",
+    "params": {
+      "Bucket": "${process.env.DO_BUCKET}"
+    }
+  }
+}
