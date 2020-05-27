@@ -1,13 +1,16 @@
 # Ultimate Strapi Starter application
-
 A strapi application with example of article with category and ratings feature
 
-# Strapi features which are implemented
+## NOTE: WORK IN PROGRESS
+plan to launch v1 in mid JUNE
+
+
+## Implemented Strapi Features
 - aws s3 upload
 - google auth
 - API documentation
 
-# setup server
+## Setup
 - go to `docs` directory
 - run command `docker-compose up -d`
 - go back to main directory
