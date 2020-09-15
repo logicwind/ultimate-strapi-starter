@@ -3,7 +3,7 @@ FROM strapi/base
 WORKDIR /opt/app
 
 COPY ./package.json ./
-COPY ./package-lock.json ./
+# COPY ./package-lock.json ./
 
 RUN yarn install
 
