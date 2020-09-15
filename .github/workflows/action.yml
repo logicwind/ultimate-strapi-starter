@@ -20,9 +20,9 @@ jobs:
         username: ${{ secrets.DO_TOKEN }}
         password: ${{ secrets.DO_TOKEN }}
         registry: ${{ env.DOCKER_REGISTRY }}
-        build_args: NPM_TOKEN=${{ secrets.TOKEN }}
+        build_args: NPM_TOKEN=${{ secrets.GITHUB_TOKEN }}
         dockerfile: ${{ env.DOCKERFILE_SERVICES }}
-        repository: ${{ env.DOCKER_BASEPATH }}/ultimate-starpi-starter
+        repository: ${{ env.DOCKER_BASEPATH }}
 #         path: './services'
         tag_with_ref: true
         always_pull: true
