@@ -1,15 +1,16 @@
 FROM strapi/base
 
+ARG NODE_ENV
+
 WORKDIR /opt/app
 
 COPY ./package.json ./
-COPY ./package-lock.json ./
 
 RUN yarn install
 
 COPY . .
 
-ENV NODE_ENV development
+ENV NODE_ENV ${NODE_ENV}
 
 RUN yarn build
 

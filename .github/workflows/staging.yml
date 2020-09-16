@@ -1,0 +1,28 @@
+name: CI for staging
+on:
+  push:
+    branches: [ staging ]
+  
+env:
+  DOCKER_REGISTRY: 'registry.digitalocean.com'
+  DOCKERFILE_SERVICES: './services/Dockerfile'
+  DOCKER_BASEPATH: 'logicwind/ultimate-starpi-starter'
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  build-base:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build and push undiffer/ultimate-starpi-starter
+      uses: docker/build-push-action@v1.1.0
+      with:
+        username: ${{ secrets.DO_TOKEN }}
+        password: ${{ secrets.DO_TOKEN }}
+        registry: ${{ env.DOCKER_REGISTRY }}
+        build_args: NPM_TOKEN=${{ secrets.GITHUB_TOKEN }},NODE_ENV=staging
+        dockerfile: ${{ env.DOCKERFILE_SERVICES }}
+        repository: ${{ env.DOCKER_BASEPATH }}
+#         path: './services'
+        tag_with_ref: true
+        always_pull: true
+        add_git_labels: true
